@@ -92,9 +92,13 @@
 
 
 import { defineConfig, devices } from '@playwright/test';
-
+import { fileURLToPath } from 'url';
+/**
+ * reportes types are: dot, html, json, junit, list, line
+ */
 export default defineConfig({
   reporter: 'line',
+  workers: 4,
   use: {
     // All requests we send go to this API endpoint.
     baseURL: 'https://qa-utsav-patel.rt.gw/wp-json/wp/v2/',
@@ -106,6 +110,9 @@ export default defineConfig({
       'Authorization': `Basic cWEtdXRzYXYtcGF0ZWw6YXdCSiBQd2lVIGNqWGkgWmlHaSBkdXpEIElDRVg=`,
     },
   },
+  // globalSetup: fileURLToPath(
+  //   new URL( './config/global-setup.ts', 'file:' + __filename ).href
+  // ),
   projects: [
     // Setup project
     { name: 'setup', testMatch: /.*\.setup\.ts/ },
