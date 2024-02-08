@@ -39,4 +39,8 @@ await expect(page.locator( "div[class='wrap'] h1" )).toHaveText( 'Upload New Med
 
     //Validate the media items.
     await expect(page.locator( '.media-list-title' )).toHaveText( 'manheim' )
+    await page.getByRole('link', { name: 'Edit', exact: true }).click();
+    await page.getByLabel('Alternative Text').click();
+    await page.getByLabel('Alternative Text').fill('manheim image');
+    await page.getByRole('button', { name: 'Update' }).click();
 });
