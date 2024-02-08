@@ -94,6 +94,17 @@
 import { defineConfig, devices } from '@playwright/test';
 
 export default defineConfig({
+  use: {
+    // All requests we send go to this API endpoint.
+    baseURL: 'https://qa-utsav-patel.rt.gw/wp-json/wp/v2/posts',
+    extraHTTPHeaders: {
+      // We set this header per GitHub guidelines.
+      'Accept': 'application/vnd.github.v3+json',
+      // Add authorization token to all requests.
+      // Assuming personal access token available in the environment.
+      'Authorization': `Basic cWEtdXRzYXYtcGF0ZWw6YXdCSiBQd2lVIGNqWGkgWmlHaSBkdXpEIElDRVg=`,
+    },
+  },
   projects: [
     // Setup project
     { name: 'setup', testMatch: /.*\.setup\.ts/ },
@@ -103,9 +114,9 @@ export default defineConfig({
       use: {
         ...devices['Desktop Chrome'],
         // Use prepared auth state.
-        storageState: 'playwright/.auth/user.json',
+        // storageState: 'playwright/.auth/user.json',
       },
-      dependencies: ['setup'],
+      // dependencies: ['setup'],
     },
 
     // {

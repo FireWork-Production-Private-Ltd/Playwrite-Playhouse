@@ -1,4 +1,55 @@
 {
-  "cookies": [],
+  "cookies": [
+    {
+      "name": "wordpress_sec_13c4fe936d288f09250768a787153bb4",
+      "value": "qa-utsav-patel%7C1707540526%7C1xKG3Ja5IROywj0h6ZIbFmFdDB3AYBh4POJhTfYoktq%7Cf126f7c0f8d980f35794b48f0b4672ec1488a82c6014212d8e20ff69871a5808",
+      "domain": "qa-utsav-patel.rt.gw",
+      "path": "/wp-content/plugins",
+      "expires": -1,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "wordpress_sec_13c4fe936d288f09250768a787153bb4",
+      "value": "qa-utsav-patel%7C1707540526%7C1xKG3Ja5IROywj0h6ZIbFmFdDB3AYBh4POJhTfYoktq%7Cf126f7c0f8d980f35794b48f0b4672ec1488a82c6014212d8e20ff69871a5808",
+      "domain": "qa-utsav-patel.rt.gw",
+      "path": "/wp-admin",
+      "expires": -1,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "wordpress_test_cookie",
+      "value": "WP%20Cookie%20check",
+      "domain": "qa-utsav-patel.rt.gw",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "wordpress_logged_in_13c4fe936d288f09250768a787153bb4",
+      "value": "qa-utsav-patel%7C1707540526%7C1xKG3Ja5IROywj0h6ZIbFmFdDB3AYBh4POJhTfYoktq%7Ceda1527036e68a7ed26b9491ce5f4cae29057206c7650768cd80c15fed66df10",
+      "domain": "qa-utsav-patel.rt.gw",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "wp-settings-time-2",
+      "value": "1707367727",
+      "domain": "qa-utsav-patel.rt.gw",
+      "path": "/",
+      "expires": 1738903727.321687,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "Lax"
+    }
+  ],
   "origins": []
 }
