@@ -1,6 +1,6 @@
 import { test, expect } from '@playwright/test';
-test('should create a bug report', async ({ request }) => {
-    const newIssue = await request.post(`https://qa-utsav-patel.rt.gw/wp-json/wp/v2/posts`, {
+test('should create a bug report', async ({ baseURL,request }) => {
+    const newIssue = await request.post(`${baseURL}/posts`, {
       data: {
         title: '[Bug] report 1',
         content: 'Bug description',
@@ -18,7 +18,7 @@ test('should create a bug report', async ({ request }) => {
 //     body: 'Bug description'
 //   }));
 
-const issues = await request.get(`https://qa-utsav-patel.rt.gw/wp-json/wp/v2/posts?per_page=1`);
+const issues = await request.get(`${baseURL}/posts?per_page=1`);
 expect(issues.ok()).toBeTruthy();
 
 const responseJson = await issues.json();

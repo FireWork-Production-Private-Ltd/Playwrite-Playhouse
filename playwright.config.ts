@@ -96,7 +96,7 @@ import { defineConfig, devices } from '@playwright/test';
 export default defineConfig({
   use: {
     // All requests we send go to this API endpoint.
-    baseURL: 'https://qa-utsav-patel.rt.gw/wp-json/wp/v2/posts',
+    baseURL: 'https://qa-utsav-patel.rt.gw/wp-json/wp/v2/',
     extraHTTPHeaders: {
       // We set this header per GitHub guidelines.
       'Accept': 'application/vnd.github.v3+json',
