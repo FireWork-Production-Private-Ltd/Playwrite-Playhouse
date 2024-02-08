@@ -97,14 +97,15 @@ import { fileURLToPath } from 'url';
  * reportes types are: dot, html, json, junit, list, line
  */
 export default defineConfig({
-  reporter: 'line',
-  workers: 4,
+  reporter: 'html',
+  workers: 10,
+  fullyParallel: true,
   use: {
     // All requests we send go to this API endpoint.
     baseURL: 'https://qa-utsav-patel.rt.gw/wp-json/wp/v2/',
     extraHTTPHeaders: {
       // We set this header per GitHub guidelines.
-      'Accept': 'application/vnd.github.v3+json',
+      // 'Accept': 'application/vnd.github.v3+json',
       // Add authorization token to all requests.
       // Assuming personal access token available in the environment.
       'Authorization': `Basic cWEtdXRzYXYtcGF0ZWw6YXdCSiBQd2lVIGNqWGkgWmlHaSBkdXpEIElDRVg=`,

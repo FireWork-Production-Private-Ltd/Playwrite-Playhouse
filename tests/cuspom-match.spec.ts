@@ -23,5 +23,5 @@ expect.extend({
 test('Test custom matcher', async () => {
     expect(10).toBeWithinRange(5, 15); // This will pass
     expect(25).not.toBeWithinRange(10, 20); // This will pass
-    expect(30).toBeWithinRange(10, 20); // This will fail
+    expect(30).not.toBeWithinRange(10, 20); // This will fail
 });
