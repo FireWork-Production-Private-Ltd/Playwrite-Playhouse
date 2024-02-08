@@ -7,9 +7,9 @@ test('test', async ({ page }) => {
   // await page.getByLabel('Password', { exact: true }).fill('.2123cds*sKird');
   // await page.getByRole('button', { name: 'Log In' }).click();
   await page.goto('https://qa-utsav-patel.rt.gw/wp-admin');
-  await page.locator('#menu-media').getByRole('link', { name: 'Media', exact: true }).click();
-  await page.getByRole('button', { name: 'Add New Media File' }).click();
-  await page.getByLabel('Select Files').click();
-  // await page.getByLabel('Select Files').setInputFiles('manheim.png');
-  // await page.locator('button').setInputFiles('manheim.png');
+  await page.getByRole('link', { name: 'Posts', exact: true }).click();
+  await page.getByLabel('Main menu', { exact: true }).getByRole('link', { name: 'Add New Post' }).click();
+  await page.getByLabel('Add title').fill('testing from playwrite');
+  await page.getByRole('button', { name: 'Publish', exact: true }).click();
+  await page.getByLabel('Editor publish').getByRole('button', { name: 'Publish', exact: true }).click();
 });

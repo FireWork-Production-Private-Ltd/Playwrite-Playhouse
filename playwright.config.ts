@@ -94,6 +94,7 @@
 import { defineConfig, devices } from '@playwright/test';
 
 export default defineConfig({
+  reporter: 'line',
   use: {
     // All requests we send go to this API endpoint.
     baseURL: 'https://qa-utsav-patel.rt.gw/wp-json/wp/v2/',
@@ -114,9 +115,9 @@ export default defineConfig({
       use: {
         ...devices['Desktop Chrome'],
         // Use prepared auth state.
-        // storageState: 'playwright/.auth/user.json',
+        storageState: 'playwright/.auth/user.json',
       },
-      // dependencies: ['setup'],
+      dependencies: ['setup'],
     },
 
     // {
